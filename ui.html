@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>金蝶云星辰-管理后台首页</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', 'Microsoft YaHei', Arial, sans-serif;
+            background: #f5f7fa;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 220px;
+            background: #232c3b;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            padding-top: 10px;
+        }
+
+        .sidebar .logo {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex: 1;
+        }
+
+        .sidebar ul li {
+            display: flex;
+            align-items: center;
+            padding: 12px 24px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: background 0.2s;
+        }
+
+        .sidebar ul li:hover,
+        .sidebar ul li.active {
+            background: #1a2233;
+        }
+
+        .sidebar ul li i {
+            margin-right: 12px;
+            font-size: 18px;
+        }
+
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            height: 56px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            padding: 0 24px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .content {
+            flex: 1;
+            padding: 32px 32px 0 32px;
+            background: #f5f7fa;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .finance-indicators {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 24px;
+        }
+
+        .indicator {
+            flex: 1;
+            text-align: center;
+        }
+
+        .indicator .value {
+            font-size: 22px;
+            color: #1976d2;
+            font-weight: bold;
+        }
+
+        .indicator .label {
+            font-size: 14px;
+            color: #888;
+            margin-top: 6px;
+        }
+
+        .charts-row {
+            display: flex;
+            gap: 32px;
+            margin-top: 16px;
+        }
+
+        .chart-card {
+            flex: 2;
+            background: #fff;
+            border-radius: 8px;
+            padding: 24px;
+            min-width: 0;
+        }
+
+        .pie-card {
+            flex: 1;
+            background: #fff;
+            border-radius: 8px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pie-title {
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .pie-legend {
+            display: flex;
+            gap: 16px;
+            margin-top: 12px;
+            font-size: 14px;
+            color: #666;
+            align-items: center;
+        }
+
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 6px;
+        }
+
+        /* 滚动条美化 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            background: #f5f7fa;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #e0e0e0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">金蝶云星辰</div>
+            <ul>
+                <li class="active"><i>🏠</i> 首页</li>
+                <li><i>📦</i> 零售应用</li>
+                <li><i>🏬</i> 门店管理</li>
+                <li><i>👥</i> 会员管理</li>
+                <li><i>🛒</i> 门店商城</li>
+                <li><i>📑</i> 订单管理</li>
+                <li><i>👤</i> 客户管理</li>
+                <li><i>💹</i> 销售管理</li>
+                <li><i>📦</i> 采购管理</li>
+                <li><i>📦</i> 库存管理</li>
+                <li><i>💰</i> 应收应付</li>
+                <li><i>🏭</i> 生产管理</li>
+                <li><i>🛠️</i> 委托加工</li>
+                <li><i>📋</i> 形单管理</li>
+                <li><i>💳</i> 账务处理</li>
+                <li><i>📊</i> 财务报表</li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="navbar">首页</div>
+            <div class="content">
+                <div class="card">
+                    <div class="finance-indicators">
+                        <div class="indicator">
+                            <div class="value">3,340.58</div>
+                            <div class="label">净利润</div>
+                        </div>
+                        <div class="indicator">
+                            <div class="value">-100.00</div>
+                            <div class="label">现金</div>
+                        </div>
+                        <div class="indicator">
+                            <div class="value">-197,920.86</div>
+                            <div class="label">银行存款</div>
+                        </div>
+                        <div class="indicator">
+                            <div class="value">-18,926.00</div>
+                            <div class="label">存货</div>
+                        </div>
+                        <div class="indicator">
+                            <div class="value">-1,243.00</div>
+                            <div class="label">应收账款</div>
+                        </div>
+                        <div class="indicator">
+                            <div class="value">-18,926.00</div>
+                            <div class="label">应付账款</div>
+                        </div>
+                        <div class="indicator">
+                            <div class="value">4,612.00</div>
+                            <div class="label">主营业务收入</div>
+                        </div>
+                    </div>
+                    <div class="charts-row">
+                        <div class="chart-card">
+                            <canvas id="lineChart" height="180"></canvas>
+                        </div>
+                        <div class="pie-card">
+                            <div class="pie-title">1月利润结构分析 / 单位: 元</div>
+                            <canvas id="pieChart" width="160" height="160"></canvas>
+                            <div class="pie-legend">
+                                <span><span class="legend-dot" style="background:#19a0ff"></span>净利润</span>
+                                <span><span class="legend-dot" style="background:#ff9800"></span>费用</span>
+                            </div>
+                            <div style="margin-top:10px;font-size:22px;color:#1976d2;font-weight:bold;">4,612.00</div>
+                            <div style="color:#888;font-size:14px;">收入总额</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // 折线图
+        const ctx = document.getElementById('lineChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月', '1月'],
+                datasets: [
+                    {
+                        label: '收入',
+                        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2000, 4000],
+                        borderColor: '#19a0ff',
+                        backgroundColor: 'rgba(25,160,255,0.1)',
+                        fill: false,
+                        tension: 0.3
+                    },
+                    {
+                        label: '成本',
+                        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 2000],
+                        borderColor: '#ff9800',
+                        backgroundColor: 'rgba(255,152,0,0.1)',
+                        fill: false,
+                        tension: 0.3
+                    },
+                    {
+                        label: '费用',
+                        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 500, 1000],
+                        borderColor: '#4caf50',
+                        backgroundColor: 'rgba(76,175,80,0.1)',
+                        fill: false,
+                        tension: 0.3
+                    },
+                    {
+                        label: '净利润',
+                        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1500, 3400],
+                        borderColor: '#1976d2',
+                        backgroundColor: 'rgba(25,118,210,0.1)',
+                        fill: false,
+                        tension: 0.3
+                    }
+                ]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        labels: {
+                            color: '#666',
+                            font: { size: 13 }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: '#888' }
+                    },
+                    y: {
+                        grid: { color: '#eee' },
+                        ticks: { color: '#888' }
+                    }
+                }
+            }
+        });
+        // 环形图
+        const pieCtx = document.getElementById('pieChart').getContext('2d');
+        new Chart(pieCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['净利润', '费用'],
+                datasets: [{
+                    data: [3400, 1212],
+                    backgroundColor: ['#19a0ff', '#ff9800'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                cutout: '70%',
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
