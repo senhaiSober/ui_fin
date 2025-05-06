@@ -252,6 +252,148 @@
                         </div>
                     </div>
                 </div>
+                <!-- 门店列表页面UI开始 -->
+                <div class="card" style="margin-top:24px;">
+                    <div style="display:flex;align-items:center;justify-content:space-between;">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <span style="font-size:20px;font-weight:500;color:#232c3b;">门店列表</span>
+                            <span style="color:#888;font-size:14px;">门店分组</span>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:8px;">
+                            <input type="text" placeholder="搜索编码/名称"
+                                style="height:32px;border:1px solid #e0e0e0;border-radius:4px;padding:0 8px;font-size:14px;outline:none;">
+                            <select
+                                style="height:32px;border:1px solid #e0e0e0;border-radius:4px;padding:0 8px;font-size:14px;">
+                                <option>常用条件过滤</option>
+                            </select>
+                            <button
+                                style="height:32px;padding:0 12px;background:#fff;border:1px solid #e0e0e0;border-radius:4px;font-size:14px;cursor:pointer;">展开过滤</button>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:8px;">
+                            <span style="color:#888;font-size:14px;">2023年01期</span>
+                            <span style="color:#888;font-size:14px;">通用账套（蝴蝶账）</span>
+                            <button
+                                style="background:#19a0ff;color:#fff;border:none;border-radius:4px;height:32px;padding:0 16px;font-size:14px;cursor:pointer;">+
+                                新增</button>
+                            <button
+                                style="height:32px;padding:0 12px;background:#fff;border:1px solid #e0e0e0;border-radius:4px;font-size:14px;cursor:pointer;">引出</button>
+                            <button
+                                style="height:32px;padding:0 12px;background:#fff;border:1px solid #e0e0e0;border-radius:4px;font-size:14px;cursor:pointer;">刷新</button>
+                        </div>
+                    </div>
+                    <div style="display:flex;margin-top:16px;min-height:420px;">
+                        <!-- 左侧树 -->
+                        <div
+                            style="width:180px;background:#f5f7fa;border:1px solid #e0e0e0;border-radius:6px;padding:12px 0 0 0;">
+                            <div
+                                style="padding:0 12px 8px 12px;font-size:15px;font-weight:500;color:#232c3b;display:flex;align-items:center;justify-content:space-between;">
+                                门店组别 <a href="#" style="font-size:13px;color:#19a0ff;text-decoration:none;">编辑</a>
+                            </div>
+                            <div style="padding:0 12px 8px 12px;">
+                                <input type="text" placeholder="查找..."
+                                    style="width:100%;height:28px;border:1px solid #e0e0e0;border-radius:4px;padding:0 6px;font-size:13px;outline:none;">
+                            </div>
+                            <ul style="list-style:none;padding:0 0 0 12px;margin:0;font-size:14px;color:#232c3b;">
+                                <li style="margin:6px 0;cursor:pointer;font-weight:500;">全部
+                                    <ul style="list-style:none;padding-left:18px;margin:0;font-size:13px;color:#555;">
+                                        <li style="margin:4px 0;cursor:pointer;">南山片区</li>
+                                        <li style="margin:4px 0;cursor:pointer;">qwe</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div style="padding:8px 12px 0 12px;font-size:13px;color:#888;">
+                                <input type="checkbox" checked style="vertical-align:middle;margin-right:4px;">包含下级
+                            </div>
+                        </div>
+                        <!-- 右侧表格 -->
+                        <div style="flex:1;margin-left:16px;overflow:auto;">
+                            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                                <button
+                                    style="background:#19a0ff;color:#fff;border:none;border-radius:4px;height:28px;padding:0 12px;font-size:13px;cursor:pointer;">启用</button>
+                                <button
+                                    style="background:#e0e0e0;color:#232c3b;border:none;border-radius:4px;height:28px;padding:0 12px;font-size:13px;cursor:pointer;">禁用</button>
+                                <button
+                                    style="background:#ff4d4f;color:#fff;border:none;border-radius:4px;height:28px;padding:0 12px;font-size:13px;cursor:pointer;">删除</button>
+                                <button
+                                    style="background:#fff;color:#232c3b;border:1px solid #e0e0e0;border-radius:4px;height:28px;padding:0 12px;font-size:13px;cursor:pointer;">复制</button>
+                                <button
+                                    style="background:#fff;color:#232c3b;border:1px solid #e0e0e0;border-radius:4px;height:28px;padding:0 12px;font-size:13px;cursor:pointer;">贴标签</button>
+                                <button
+                                    style="background:#fff;color:#232c3b;border:1px solid #e0e0e0;border-radius:4px;height:28px;padding:0 12px;font-size:13px;cursor:pointer;">更多</button>
+                            </div>
+                            <div style="overflow-x:auto;">
+                                <table style="width:100%;border-collapse:collapse;font-size:13px;background:#fff;">
+                                    <thead>
+                                        <tr style="background:#f5f7fa;color:#232c3b;">
+                                            <th style="padding:8px 6px;border-bottom:1px solid #e0e0e0;">门店编码</th>
+                                            <th style="padding:8px 6px;border-bottom:1px solid #e0e0e0;">门店简称</th>
+                                            <th style="padding:8px 6px;border-bottom:1px solid #e0e0e0;">门店组别</th>
+                                            <th style="padding:8px 6px;border-bottom:1px solid #e0e0e0;">对应仓库</th>
+                                            <th style="padding:8px 6px;border-bottom:1px solid #e0e0e0;">联系人</th>
+                                            <th style="padding:8px 6px;border-bottom:1px solid #e0e0e0;">联系电话</th>
+                                            <th style="padding:8px 6px;border-bottom:1px solid #e0e0e0;">关联客户</th>
+                                            <th style="padding:8px 6px;border-bottom:1px solid #e0e0e0;">结算客户</th>
+                                            <th style="padding:8px 6px;border-bottom:1px solid #e0e0e0;">所属部门</th>
+                                            <th style="padding:8px 6px;border-bottom:1px solid #e0e0e0;">门店类型</th>
+                                            <th style="padding:8px 6px;border-bottom:1px solid #e0e0e0;">经营方式</th>
+                                            <th style="padding:8px 6px;border-bottom:1px solid #e0e0e0;">备注</th>
+                                            <th style="padding:8px 6px;border-bottom:1px solid #e0e0e0;">标签</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">MD00001</td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">南山一店</td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">南山片区</td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">南山一店</td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">阿环</td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">15360460212
+                                            </td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">南山加盟一店</td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">门店零售部</td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">线下</td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">自营</td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">-</td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">MD00002</td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">加盟门店</td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">加盟门店</td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">南山加盟一店</td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">-</td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">-</td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">-</td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">门店零售部</td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">线下</td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">加盟</td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">-</td>
+                                            <td style="padding:8px 6px;border-bottom:1px solid #f0f0f0;">-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div
+                                style="display:flex;align-items:center;justify-content:space-between;margin-top:8px;font-size:13px;color:#888;">
+                                <div>共2条 (2家)</div>
+                                <div style="display:flex;align-items:center;gap:4px;">
+                                    <span>共1页</span>
+                                    <button
+                                        style="border:none;background:#f5f7fa;color:#888;padding:2px 8px;border-radius:3px;cursor:pointer;">&lt;</button>
+                                    <input type="text" value="1"
+                                        style="width:28px;text-align:center;border:1px solid #e0e0e0;border-radius:3px;height:22px;font-size:13px;">
+                                    <button
+                                        style="border:none;background:#f5f7fa;color:#888;padding:2px 8px;border-radius:3px;cursor:pointer;">&gt;</button>
+                                    <select
+                                        style="height:22px;border:1px solid #e0e0e0;border-radius:3px;font-size:13px;">
+                                        <option>20条/页</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 门店列表页面UI结束 -->
             </div>
         </div>
     </div>
